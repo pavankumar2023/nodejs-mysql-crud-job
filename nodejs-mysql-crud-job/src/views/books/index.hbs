@@ -1,0 +1,37 @@
+<div class="container">
+    <a href="/books/create">
+        <div class="btn btn btn-outline-success mt-2">Create</div>
+    </a>
+    <div class="row my-2">
+        {{#each books}}
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>{{title}}</h2>
+                        <p>{{description}}</p>
+                        <small>{{ timeago create_at}}</small>
+                    </div>
+                    <div class="card-footer">
+                        <div class="float-right">
+                            <a href="/books/edit/{{id}}">
+                                <button class="btn btn-outline-success">Edit</button>
+                            </a>
+                            <a href="/books/delete/{{id}}">
+                                <button class="btn btn-outline-danger">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p>There are not books saved yet.</p>
+                        <a href="/books/create">Create one!</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
