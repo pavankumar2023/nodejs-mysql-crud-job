@@ -46,5 +46,3 @@ $ npm run dev
 
   
 
-## License 🔥
-Copyright © 2019-present [Oscar Amado](https://github.com/ofaaoficial) 🧔
